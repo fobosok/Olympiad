@@ -13,6 +13,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
 		AddForm AddForm = null;
+		DelForm DelForm = null;
         public Form1()
         {
             InitializeComponent();
@@ -92,6 +93,15 @@ namespace WindowsFormsApp1
 		{
 			AddForm = new AddForm(3);
 			if (AddForm.ShowDialog() == DialogResult.OK)
+			{
+				RefreshTree();
+			}
+		}
+
+		private void button8_Click(object sender, EventArgs e)
+		{
+			DelForm = new DelForm(0);
+			if (DelForm.ShowDialog()== DialogResult.OK)
 			{
 				RefreshTree();
 			}

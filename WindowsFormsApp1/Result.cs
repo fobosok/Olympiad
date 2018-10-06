@@ -12,7 +12,5 @@ namespace WindowsFormsApp1
         public string ResultMedalType { get; set; }
 
         public int PersonId { get; set; }
-
-
 	}
 }
