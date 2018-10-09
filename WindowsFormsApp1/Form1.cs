@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,24 +28,28 @@ namespace WindowsFormsApp1
 				{
 					TreeNode nodeOlympiad = new TreeNode(olympiad.OlympiadYear.ToString());
 					treeView1.Nodes.Add(nodeOlympiad);
+					treeView1.ExpandAll();
 					foreach (var sport in db.Sports.ToList())
 					{
 						if (sport.OlympiadId == olympiad.Id)
 						{
 							TreeNode nodeSport = new TreeNode(sport.SportName);
 							nodeOlympiad.Nodes.Add(nodeSport);
+							nodeOlympiad.ExpandAll();
 							foreach (var person in db.Persons.ToList())
 							{
 								if (person.SportId == sport.Id)
 								{
 									TreeNode nodePerson = new TreeNode(person.PersonFirstName);
 									nodeSport.Nodes.Add(nodePerson);
+									nodeSport.ExpandAll();
 									foreach (var result in db.Results.ToList())
 									{
 										if(result.PersonId == person.Id)
 										{
 											TreeNode nodeResult = new TreeNode(result.ResultMedalType);
 											nodePerson.Nodes.Add(nodeResult);
+											nodePerson.ExpandAll();
 										}
 									}
 								}
@@ -102,6 +107,46 @@ namespace WindowsFormsApp1
 		{
 			DelForm = new DelForm(0);
 			if (DelForm.ShowDialog()== DialogResult.OK)
+			{
+				RefreshTree();
+			}
+		}
+
+		private void button9_Click(object sender, EventArgs e)
+		{
+			using (ApplicationContext db = new ApplicationContext())
+			{
+				db.Results.RemoveRange(db.Results);
+				db.Persons.RemoveRange(db.Persons);
+				db.Sports.RemoveRange(db.Sports);
+				db.Olympiads.RemoveRange(db.Olympiads);
+				db.SaveChanges();
+				RefreshTree();
+			}
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			DelForm = new DelForm(1);
+			if (DelForm.ShowDialog() == DialogResult.OK)
+			{
+				RefreshTree();
+			}
+		}
+
+		private void button6_Click(object sender, EventArgs e)
+		{
+			DelForm = new DelForm(2);
+			if (DelForm.ShowDialog() == DialogResult.OK)
+			{
+				RefreshTree();
+			}
+		}
+
+		private void button5_Click(object sender, EventArgs e)
+		{
+			DelForm = new DelForm(3);
+			if (DelForm.ShowDialog() == DialogResult.OK)
 			{
 				RefreshTree();
 			}
