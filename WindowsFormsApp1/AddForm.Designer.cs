@@ -41,6 +41,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.textBox1 = new System.Windows.Forms.TextBox();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.button8 = new System.Windows.Forms.Button();
 			this.label14 = new System.Windows.Forms.Label();
 			this.textBox6 = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@
 			this.label6 = new System.Windows.Forms.Label();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
+			this.button7 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.label20 = new System.Windows.Forms.Label();
 			this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -66,6 +68,13 @@
 			this.label13 = new System.Windows.Forms.Label();
 			this.comboBox2 = new System.Windows.Forms.ComboBox();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.button6 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
+			this.label21 = new System.Windows.Forms.Label();
+			this.comboBox6 = new System.Windows.Forms.ComboBox();
+			this.label22 = new System.Windows.Forms.Label();
+			this.comboBox7 = new System.Windows.Forms.ComboBox();
 			this.label19 = new System.Windows.Forms.Label();
 			this.comboBox4 = new System.Windows.Forms.ComboBox();
 			this.label18 = new System.Windows.Forms.Label();
@@ -73,15 +82,6 @@
 			this.label17 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.label21 = new System.Windows.Forms.Label();
-			this.comboBox6 = new System.Windows.Forms.ComboBox();
-			this.label22 = new System.Windows.Forms.Label();
-			this.comboBox7 = new System.Windows.Forms.ComboBox();
-			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
-			this.button8 = new System.Windows.Forms.Button();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabPage2.SuspendLayout();
@@ -100,7 +100,7 @@
 			this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(266, 248);
+			this.tabControl1.Size = new System.Drawing.Size(271, 248);
 			this.tabControl1.TabIndex = 0;
 			// 
 			// tabPage1
@@ -120,7 +120,7 @@
 			this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-			this.tabPage1.Size = new System.Drawing.Size(258, 222);
+			this.tabPage1.Size = new System.Drawing.Size(263, 222);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Olympiad";
 			// 
@@ -248,6 +248,16 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Sport";
 			// 
+			// button8
+			// 
+			this.button8.Location = new System.Drawing.Point(190, 33);
+			this.button8.Name = "button8";
+			this.button8.Size = new System.Drawing.Size(56, 23);
+			this.button8.TabIndex = 12;
+			this.button8.Text = "select";
+			this.button8.UseVisualStyleBackColor = true;
+			this.button8.Click += new System.EventHandler(this.button8_Click);
+			// 
 			// label14
 			// 
 			this.label14.AutoSize = true;
@@ -358,6 +368,16 @@
 			this.tabPage3.Size = new System.Drawing.Size(258, 222);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Person";
+			// 
+			// button7
+			// 
+			this.button7.Location = new System.Drawing.Point(188, 50);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(56, 23);
+			this.button7.TabIndex = 21;
+			this.button7.Text = "select";
+			this.button7.UseVisualStyleBackColor = true;
+			this.button7.Click += new System.EventHandler(this.button7_Click);
 			// 
 			// button3
 			// 
@@ -516,6 +536,74 @@
 			this.tabPage4.TabIndex = 3;
 			this.tabPage4.Text = "Result";
 			// 
+			// button6
+			// 
+			this.button6.Location = new System.Drawing.Point(197, 90);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(56, 23);
+			this.button6.TabIndex = 28;
+			this.button6.Text = "select";
+			this.button6.UseVisualStyleBackColor = true;
+			this.button6.Click += new System.EventHandler(this.button6_Click);
+			// 
+			// button5
+			// 
+			this.button5.Location = new System.Drawing.Point(197, 64);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(56, 23);
+			this.button5.TabIndex = 27;
+			this.button5.Text = "select";
+			this.button5.UseVisualStyleBackColor = true;
+			this.button5.Click += new System.EventHandler(this.button5_Click);
+			// 
+			// button4
+			// 
+			this.button4.Location = new System.Drawing.Point(197, 39);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(56, 23);
+			this.button4.TabIndex = 22;
+			this.button4.Text = "select";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
+			// 
+			// label21
+			// 
+			this.label21.AutoSize = true;
+			this.label21.Location = new System.Drawing.Point(21, 44);
+			this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label21.Name = "label21";
+			this.label21.Size = new System.Drawing.Size(75, 13);
+			this.label21.TabIndex = 26;
+			this.label21.Text = "Olympiad Year";
+			// 
+			// comboBox6
+			// 
+			this.comboBox6.FormattingEnabled = true;
+			this.comboBox6.Location = new System.Drawing.Point(100, 41);
+			this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
+			this.comboBox6.Name = "comboBox6";
+			this.comboBox6.Size = new System.Drawing.Size(92, 21);
+			this.comboBox6.TabIndex = 25;
+			// 
+			// label22
+			// 
+			this.label22.AutoSize = true;
+			this.label22.Location = new System.Drawing.Point(33, 69);
+			this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.label22.Name = "label22";
+			this.label22.Size = new System.Drawing.Size(63, 13);
+			this.label22.TabIndex = 24;
+			this.label22.Text = "Sport Name";
+			// 
+			// comboBox7
+			// 
+			this.comboBox7.FormattingEnabled = true;
+			this.comboBox7.Location = new System.Drawing.Point(100, 66);
+			this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
+			this.comboBox7.Name = "comboBox7";
+			this.comboBox7.Size = new System.Drawing.Size(92, 21);
+			this.comboBox7.TabIndex = 23;
+			// 
 			// label19
 			// 
 			this.label19.AutoSize = true;
@@ -594,99 +682,11 @@
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// button4
-			// 
-			this.button4.Location = new System.Drawing.Point(197, 39);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(56, 23);
-			this.button4.TabIndex = 22;
-			this.button4.Text = "select";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
-			// 
-			// label21
-			// 
-			this.label21.AutoSize = true;
-			this.label21.Location = new System.Drawing.Point(21, 44);
-			this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label21.Name = "label21";
-			this.label21.Size = new System.Drawing.Size(75, 13);
-			this.label21.TabIndex = 26;
-			this.label21.Text = "Olympiad Year";
-			// 
-			// comboBox6
-			// 
-			this.comboBox6.FormattingEnabled = true;
-			this.comboBox6.Location = new System.Drawing.Point(100, 41);
-			this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
-			this.comboBox6.Name = "comboBox6";
-			this.comboBox6.Size = new System.Drawing.Size(92, 21);
-			this.comboBox6.TabIndex = 25;
-			// 
-			// label22
-			// 
-			this.label22.AutoSize = true;
-			this.label22.Location = new System.Drawing.Point(33, 69);
-			this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label22.Name = "label22";
-			this.label22.Size = new System.Drawing.Size(63, 13);
-			this.label22.TabIndex = 24;
-			this.label22.Text = "Sport Name";
-			// 
-			// comboBox7
-			// 
-			this.comboBox7.FormattingEnabled = true;
-			this.comboBox7.Location = new System.Drawing.Point(100, 66);
-			this.comboBox7.Margin = new System.Windows.Forms.Padding(2);
-			this.comboBox7.Name = "comboBox7";
-			this.comboBox7.Size = new System.Drawing.Size(92, 21);
-			this.comboBox7.TabIndex = 23;
-			// 
-			// button5
-			// 
-			this.button5.Location = new System.Drawing.Point(197, 64);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(56, 23);
-			this.button5.TabIndex = 27;
-			this.button5.Text = "select";
-			this.button5.UseVisualStyleBackColor = true;
-			this.button5.Click += new System.EventHandler(this.button5_Click);
-			// 
-			// button6
-			// 
-			this.button6.Location = new System.Drawing.Point(197, 90);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(56, 23);
-			this.button6.TabIndex = 28;
-			this.button6.Text = "select";
-			this.button6.UseVisualStyleBackColor = true;
-			this.button6.Click += new System.EventHandler(this.button6_Click);
-			// 
-			// button7
-			// 
-			this.button7.Location = new System.Drawing.Point(188, 50);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(56, 23);
-			this.button7.TabIndex = 21;
-			this.button7.Text = "select";
-			this.button7.UseVisualStyleBackColor = true;
-			this.button7.Click += new System.EventHandler(this.button7_Click);
-			// 
-			// button8
-			// 
-			this.button8.Location = new System.Drawing.Point(190, 33);
-			this.button8.Name = "button8";
-			this.button8.Size = new System.Drawing.Size(56, 23);
-			this.button8.TabIndex = 12;
-			this.button8.Text = "select";
-			this.button8.UseVisualStyleBackColor = true;
-			this.button8.Click += new System.EventHandler(this.button8_Click);
-			// 
 			// AddForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(266, 321);
+			this.ClientSize = new System.Drawing.Size(271, 321);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.tabControl1);

@@ -114,14 +114,18 @@ namespace WindowsFormsApp1
 
 		private void button9_Click(object sender, EventArgs e)
 		{
-			using (ApplicationContext db = new ApplicationContext())
+			DialogResult dr = MessageBox.Show("Are you sure?","Delete all olympiads", MessageBoxButtons.YesNo);
+			if(dr == DialogResult.Yes)
 			{
-				db.Results.RemoveRange(db.Results);
-				db.Persons.RemoveRange(db.Persons);
-				db.Sports.RemoveRange(db.Sports);
-				db.Olympiads.RemoveRange(db.Olympiads);
-				db.SaveChanges();
-				RefreshTree();
+				using (ApplicationContext db = new ApplicationContext())
+				{
+					db.Results.RemoveRange(db.Results);
+					db.Persons.RemoveRange(db.Persons);
+					db.Sports.RemoveRange(db.Sports);
+					db.Olympiads.RemoveRange(db.Olympiads);
+					db.SaveChanges();
+					RefreshTree();
+				}
 			}
 		}
 
